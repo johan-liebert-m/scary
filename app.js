@@ -7,5 +7,7 @@ app.get("/", function (req, res) {
     res.sendFile(__dirname + "/scary.html")
 })
 
-app.listen(80)
-console.log("server running on 80")
+const port = process.env.PORT || 3000
+
+app.listen(port)
+console.log("server running on " + port)
